@@ -14,6 +14,8 @@ DOWNLOADER_MIDDLEWARES = {
     'steam.middlewares.CircumventAgeCheckMiddleware': 600#,
 }
 
+DOWNLOAD_DELAY = 0.1
+
 AUTOTHROTTLE_ENABLED = True
 AUTOTHROTTLE_TARGET_CONCURRENCY = 4.0
 
