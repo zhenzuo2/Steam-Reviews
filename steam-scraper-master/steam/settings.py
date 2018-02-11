@@ -10,8 +10,8 @@ USER_AGENT = 'Steam Scraper'
 ROBOTSTXT_OBEY = True
 
 DOWNLOADER_MIDDLEWARES = {
-    'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
-    'steam.middlewares.CircumventAgeCheckMiddleware': 600,
+    #'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
+    'steam.middlewares.CircumventAgeCheckMiddleware': 600#,
 }
 
 AUTOTHROTTLE_ENABLED = True
