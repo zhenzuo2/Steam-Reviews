@@ -10,14 +10,11 @@ USER_AGENT = 'Steam Scraper'
 ROBOTSTXT_OBEY = True
 
 DOWNLOADER_MIDDLEWARES = {
-    #'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
-    'steam.middlewares.CircumventAgeCheckMiddleware': 600#,
+    'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
+    'steam.middlewares.CircumventAgeCheckMiddleware': 600,
 }
 
-DOWNLOAD_DELAY = 0.1
-
 AUTOTHROTTLE_ENABLED = True
-AUTOTHROTTLE_TARGET_CONCURRENCY = 4.0
 
 DUPEFILTER_CLASS = 'steam.middlewares.SteamDupeFilter'
 
@@ -29,3 +26,5 @@ HTTPCACHE_STORAGE = 'steam.middlewares.SteamCacheStorage'
 
 AWS_ACCESS_KEY_ID = getenv('AWS_ACCESS_KEY_ID', type=str, default=None)
 AWS_SECRET_ACCESS_KEY = getenv('AWS_SECRET_ACCESS_KEY', type=str, default=None)
+
+FEED_EXPORT_ENCODING = 'utf-8'
